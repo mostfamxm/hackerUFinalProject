@@ -1,0 +1,36 @@
+{
+  "name": "mern-marketplace",
+  "version": "1.0.0",
+  "description": "A marketplace application built with the MERN stack.",
+  "main": "index.js", 
+  "scripts": {
+    "start": "NODE_ENV=production node ./dist/server.generated.js",
+    "build": "webpack --config ./client/webpack.config.client.production.js --mode production && webpack --config ./server/webpack.config.server.js --mode production",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.js", 
+    "client": "react-scripts start" 
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0",
+    "nodemon": "^2.0.4",
+    "concurrently": "^5.3.0",
+    "babel-loader": "^8.2.1" 
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "keywords": [
+    "MERN",
+    "marketplace",
+    "web",
+    "application"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/your-repo.git"
+  }
+}
